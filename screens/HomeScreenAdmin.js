@@ -4,14 +4,14 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 
 const data = [
-  { id: '1', title: 'Danh sách thiết bị', icon: 'list' },
+  { id: '1', title: 'Quản lý thiết bị', icon: 'list', screen: 'ListRooms' },
   { id: '2', title: 'Quét QR thiết bị', icon: 'qrcode' },
-  { id: '3', title: 'Thiết bị của tôi', icon: 'star', screen: 'MyServices' },
-  { id: '4', title: 'Hồ sơ', icon: 'user-circle-o', screen: 'MyProfile' },
+  { id: '3', title: 'Danh sách người dùng', icon: 'user-o', screen: 'ListUser' },
+  { id: '4', title: 'Hồ sơ', icon: 'user-circle-o', screen: 'MyProfileAdmin' },
   { id: '5', title: 'Đăng xuất', icon: 'arrow-circle-left' },
 ];
 
-const HomeScreen = ({ route }) => {
+const HomeScreenAdmin = ({ route }) => {
   const navigation = useNavigation();
   const { fullname } = route.params || {};
 
@@ -72,4 +72,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default HomeScreenAdmin;
